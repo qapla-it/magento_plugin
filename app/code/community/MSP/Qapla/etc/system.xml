@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * IDEALIAGroup srl
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to info@idealiagroup.com so we can send you a copy immediately.
+ *
+ * @copyright  Copyright (c) 2017 IDEALIAGroup srl (http://www.idealiagroup.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <tabs>
+        <msp translate="label" module="msp_qapla">
+            <label>MageSpecialist</label>
+            <sort_order>100</sort_order>
+        </msp>
+    </tabs>
+    <sections>
+        <msp_qapla module="msp_qapla">
+            <label>Qapla'</label>
+            <tab>msp</tab>
+            <sort_order>200</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label" module="msp_qapla">
+                    <label>General</label>
+                    <expanded>1</expanded>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label" module="msp_qapla">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <comment>Qapla' API will respond in the selected language</comment>
+                        </enabled>
+                        <api_key translate="label comment" module="msp_qapla">
+                            <label>API Key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Insert your Qapla' API Key (64 characters)</comment>
+                        </api_key>
+                        <check translate="label comment" module="msp_qapla">
+                            <label>Check API Key</label>
+                            <frontend_type>button</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Check your API Key</comment>
+                            <frontend_model>msp_qapla/adminhtml_system_config_button</frontend_model>
+                        </check>
+                        <api_language translate="label comment" module="msp_qapla">
+                            <label>API Language</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>msp_qapla/source_language</source_model>
+                            <comment>Qapla' API will respond in the selected language</comment>
+                        </api_language>
+                        <cashondelivery_methods>
+                            <label>Cash on delivery</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <source_model>msp_qapla/source_methods</source_model>
+                            <comment>If you use 'on shipment creation' send mode you need to specify which payment methods are to be considered Cash on Delivery</comment>
+                        </cashondelivery_methods>
+                        <send_mode translate="label comment" module="msp_qapla">
+                            <label>Send data to Qapla</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>msp_qapla/source_mode</source_model>
+                            <comment>When does the extension should create a shipping in Qapla?</comment>
+                        </send_mode>
+                        <message_template translate="label comment" module="msp_qapla">
+                            <label>Displayed message</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Allowed placeholders: [*REFERENCE*], [*STATUS*], [*COURIER*], [*STATUS_DATE*], [*STATUS_PLACE*], [*TRACKING_URL*], [*COURIER_LOGO*]</comment>
+                        </message_template>
+                    </fields>
+                </general>
+            </groups>
+        </msp_qapla>
+    </sections>
+</config>

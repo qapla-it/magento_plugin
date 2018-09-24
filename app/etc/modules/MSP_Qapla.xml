@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MSP_Qapla>
+            <active>true</active>
+            <codePool>community</codePool>
+        </MSP_Qapla>
+    </modules>
+</config>
